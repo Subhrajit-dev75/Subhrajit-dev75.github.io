@@ -1,0 +1,35 @@
+/* src/index.css */
+
+/* Import Tailwind’s base styles, components, and utility classes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add custom base styles using the base layer */
+@layer base {
+  /* All h1 elements will have red text unless overridden by inline classes */
+  h1 {
+    @apply text-red-600;
+  }
+  
+  /* All paragraph elements will get custom styling */
+  p {
+    @apply text-red-300 font-extrabold hover:text-white;
+  }
+}
+
+/* Define custom component classes using the components layer */
+@layer components {
+  /* Custom button style */
+  .btn {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full;
+  }
+}
+
+/* Add custom utility classes using the utilities layer */
+@layer utilities {
+  /* Custom text class for small, bold monospace text */
+  .myTextClass {
+    @apply text-xs text-black font-mono font-bold hover:underline hover:underline-offset-2 hover:text-red-600;
+  }
+}
